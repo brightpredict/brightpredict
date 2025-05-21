@@ -8,6 +8,22 @@
     body {
       background: #af89d1;
     }
+
+    h2 {
+
+         background: red;
+         animation: blink-animation 2s
+         steps(1, start) infinite;
+         viaibility: hidden;
+   }
+
+
+       @keyframes blink-animation {
+         0% {visibility: visible;}
+         50%{ visibility: hidden;}
+         100% {visibility: visible;}
+
+       }
     table {
       width: 100%;
       border-collapse: collapse;
@@ -38,7 +54,67 @@
 
   <p><button><a href="page.html">GO BACK</a></button></p>
 
+  <h3>Today's predictions</h3>
 
+  <table>
+    <thead>
+      <tr>
+        <th>Match</th>
+        <th>Prediction</th>
+        <th>Odds</th>
+        <th>Status</th>
+        <th>Results</th>
+
+
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Grobinas sc Vs FK Tukums 2000</td>
+        <td><a href="Today.html"> view tip</a></td>
+
+        <td>1.56</td>
+        <td class="high-confidence">..</td>
+        <td>pending</td>
+
+      </tr>
+      <tr>
+        <td>Fc Dordrecht Vs Willem II Tiburg</td>
+        <td><a href="Today.html"> view tip</a></td>
+        <td>2.61</td>
+
+        <td class="high-confidence">..</td>
+        <td>pending</td>
+
+      </tr>
+      <tr>
+        <td>AL-Shabbab Vs Al-Ahli sc Manama</td>
+        <td><a href="Today.html"> view tip</a></td>
+        <td>2.70</td>
+
+        <td class="high-confidence">..</td>
+        <td>pending</td>
+
+
+
+
+
+      </tr>
+      <tr>
+        <td>Tempereen ilves Vs Kuopion Palloseura</td>
+        <td><a href="Today.html"> view tip</a></td>
+        <td>3.27</td>
+
+        <td class="high-confidence">..</td>
+        <td>pending</td>
+
+
+      </tr>
+
+    </tbody>
+  </table>
+
+  <h2>MAKE PAYMENT VIA Till <U>4743682</U></h2>
   <script type="text/javascript">
 
     alert(" You have not make any payment Kindly make payment via till number 4743682 to be able to access tips")

@@ -22,12 +22,25 @@
       padding: 20px;
     }
 
-     h3 {
-      text-align: center;
-      color: red;
+     h2 {
+
+          background: red;
+          animation: blink-animation 2s
+          steps(1, start) infinite;
+          viaibility: hidden;
     }
-    h2 {
-     background: green;
+
+
+        @keyframes blink-animation {
+          0% {visibility: visible;}
+          50%{ visibility: hidden;}
+          100% {visibility: visible;}
+
+        }
+    }
+
+    h3 {
+     background: magenta;
      color: #333;
    }
 
@@ -202,9 +215,9 @@
 </head>
 <body>
 
-  <h3>Kindly make a payment of Ksh25 via till<u> 4743682 </u>to view tip</h3>
+  <h2>Kindly make a payment of Ksh25 via till<u> 4743682 </u>to view tip today's tip</h2>
 
-  <h2>Today's Betting Predictions</h2>
+  <h3>Today's predictions</h3>
 
   <table>
     <thead>
@@ -220,41 +233,44 @@
     </thead>
     <tbody>
       <tr>
-        <td>Us boulogne vs Clermont foot 63</td>
-        <td><a href="today.html"> view tip</a></td>
+        <td>Grobinas sc Vs FK Tukums 2000</td>
+        <td><a href="Today.html"> view tip</a></td>
 
-        <td>3.17</td>
+        <td>1.56</td>
         <td class="high-confidence">..</td>
         <td>pending</td>
 
       </tr>
       <tr>
-        <td>Supersport united Vs Orlando pirates fc</td>
-        <td><a href="today.html"> view tip</a></td>
+        <td>Fc Dordrecht Vs Willem II Tiburg</td>
+        <td><a href="Today.html"> view tip</a></td>
+        <td>2.61</td>
 
-        <td>2.69</td>
         <td class="high-confidence">..</td>
         <td>pending</td>
 
       </tr>
       <tr>
-        <td>Fc Dendosch Vs SC Telster</td>
-        <td><a href="today.html"> view tip</a></td>
+        <td>AL-Shabbab Vs Al-Ahli sc Manama</td>
+        <td><a href="Today.html"> view tip</a></td>
+        <td>2.70</td>
 
-
-        <td>2.31</td>
-        <td class="low-confidence">..</td>
+        <td class="high-confidence">..</td>
         <td>pending</td>
+
+
+
+
 
       </tr>
       <tr>
-        <td>York city fc Vs Oltham Athletic</td>
-        <td><a href="today.html"> view tip</a></td>
+        <td>Tempereen ilves Vs Kuopion Palloseura</td>
+        <td><a href="Today.html"> view tip</a></td>
+        <td>3.27</td>
 
-
-        <td>1.55</td>
         <td class="high-confidence">..</td>
         <td>pending</td>
+
 
       </tr>
 
@@ -263,7 +279,7 @@
 </div>
   <div class="ads-container">
     <div class="ad-column">
-      <img src="image1.jpg" alt="Today game" class="ad-img">
+      <img src="image3.jpg" alt="Today game" class="ad-img">
       <img src="image2.jpg" alt="Product 2" class="ad-img">
       <video controls class="ad-video">
         <source src="video1.mp4" type="video/mp4">
