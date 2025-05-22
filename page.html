@@ -7,7 +7,7 @@
   </head>
   <p><button><a href="home.html">GO BACK</a></button></p>
   <p><button><a href="history.html">Our previous predictions</a></button></p>
-  <p><button><a href="today.html">View todays Tips</a></button></p>
+  <p><button><a href="ex-6a.html">View todays Tips</a></button></p>
 
 
   <style>
@@ -25,7 +25,7 @@
      h2 {
 
           background: red;
-          animation: blink-animation 2s
+          animation: blink-animation 3s
           steps(1, start) infinite;
           viaibility: hidden;
     }
@@ -33,7 +33,7 @@
 
         @keyframes blink-animation {
           0% {visibility: visible;}
-          50%{ visibility: hidden;}
+          20%{ visibility: hidden;}
           100% {visibility: visible;}
 
         }
@@ -211,13 +211,26 @@
   padding-top: 10px;
   color: #aaa;
 }
+button {
+            padding: 10px 20px;
+            background-color: #2575fc;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #1a5ed8;
+        }
   </style>
 </head>
 <body>
 
   <h2>Kindly make a payment of Ksh25 via till<u> 4743682 </u>to view tip today's tip</h2>
 
-  <h3>Today's predictions</h3>
+  <h3>Today's predictions</h3> Total odds 32.06
 
   <table>
     <thead>
@@ -233,155 +246,125 @@
     </thead>
     <tbody>
       <tr>
-        <td>Grobinas sc Vs FK Tukums 2000</td>
-        <td><a href="Today.html"> view tip</a></td>
+        <td>FC BKMA Yerevan vs
+          FC Alashkert Yerevan</td>
+        <td>....</td>
 
-        <td>1.56</td>
+        <td>1.80</td>
         <td class="high-confidence">..</td>
         <td>pending</td>
 
       </tr>
       <tr>
-        <td>Fc Dordrecht Vs Willem II Tiburg</td>
-        <td><a href="Today.html"> view tip</a></td>
-        <td>2.61</td>
+        <td>PFC Ludogorets 1945 Razgrad vs
+          PFC CSKA Sofia</td>
+        <td>...</td>
+        <td>1.80</td>
 
         <td class="high-confidence">..</td>
         <td>pending</td>
 
       </tr>
       <tr>
-        <td>AL-Shabbab Vs Al-Ahli sc Manama</td>
-        <td><a href="Today.html"> view tip</a></td>
-        <td>2.70</td>
+        <td>Athens Kallithea FC vs
+          PAS Lamia 1964</td>
+        <td>...</td>
+        <td>1.90</td>
 
         <td class="high-confidence">..</td>
         <td>pending</td>
-
-
-
 
 
       </tr>
       <tr>
-        <td>Tempereen ilves Vs Kuopion Palloseura</td>
-        <td><a href="Today.html"> view tip</a></td>
-        <td>3.27</td>
+        <td>Livingston FC
+          Ross County FC</td>
+        <td>...</td>
+        <td>2.06</td>
 
         <td class="high-confidence">..</td>
         <td>pending</td>
 
 
       </tr>
+      <tr>
+        <td>FC Winterthur vs
+          FC Sion</td>
+        <td>..</td>
+        <td>1.66</td>
+
+        <td class="high-confidence">..</td>
+        <td>pending</td>
+
+
+      </tr>
+
+
 
     </tbody>
   </table>
 </div>
   <div class="ads-container">
     <div class="ad-column">
-      <img src="image3.jpg" alt="Today game" class="ad-img">
-      <img src="image2.jpg" alt="Product 2" class="ad-img">
+      <p>scan to make payment</p>
+      <p>daily @Ksh25</p>
+      <img src="image3.jpg" alt="Scan to make payment" class="ad-img">
       <video controls class="ad-video">
-        <source src="video1.mp4" type="video/mp4">
         Your browser does not support the video tag.
       </video>
     </div>
 
     <div class="ad-column">
-      <img src="image3.jpg" alt="Product 3" class="ad-img">
+      <p>scan to make payment</p>
+      <p>weekly@Ksh110</p>
       <img src="image4.jpg" alt="Product 4" class="ad-img">
       <video controls class="ad-video">
-        <source src="video2.mp4" type="video/mp4" width 20%;>
+        <source src="" type="" width 20%;>
         Your browser does not support the video tag.
       </video>
     </div>
   </div>
   <div class="affiliate-section">
     <h3>Recommended Bookmakers</h3>
-    <p>Join <strong>brightbet</strong> via the link below and get ksh 300 directy in your account</p>
-    <a href="Brightbet.html" target="_blank" class="affiliate-link">Join BetNow - Get 100% Bonus</a>
+    <p>Join <strong>Betika</strong> via the link below and get 10% bonus</p>
+    <a href="Brightbet.html" target="_blank" class="affiliate-link">Join BetNow - Get 10% Bonus</a>
   </div>
 
   <div class="payment-section">
-    <h3>Subscribe to Premium Tips</h3>
+    <h3>Make payment to view Tips</h3>
 
     <div class="payment-methods">
-      <div class="payment-method active" onclick="selectMethod('card')">Credit/Debit Card</div>
-      <div class="payment-method" onclick="selectMethod('till')">Till Number</div>
+      <div class="payment-method">Till Number</div>
     </div>
 
-    <form id="card-payment">
-      <div class="form-group">
-        <label for="name">Full Name</label>
-        <input type="text" id="name" required>
-      </div>
-      <div class="form-group">
-        <label for="email">Email Address</label>
-        <input type="email" id="email" required>
-      </div>
-      <div class="form-group">
-        <label for="plan">Select Plan</label>
-        <select id="plan" required>
-          <option value="">Choose a plan</option>
-          <option value="daily">Daily - Ksh25</option>
-          <option value="weekly">Weekly - ksh115</option>
-          <option value="monthly">Monthly - Ksh300</option>
-        </select>
-      </div>
-      <div class="form-group">
-        <label for="card">Card Number</label>
-        <input type="text" id="card" placeholder="1234 5678 9012 3456" required>
-      </div>
-      <div class="form-group">
-        <label for="expiry">Expiry Date</label>
-        <input type="text" id="expiry" placeholder="MM/YY" required>
-      </div>
-      <div class="form-group">
-        <label for="cvv">CVV</label>
-        <input type="text" id="cvv" placeholder="123" required>
-      </div>
-      <button type="submit" class="btn">Pay with Card</button>
-    </form>
-
-    <form id="till-payment" class="hidden">
       <div class="form-group">
         <label>Till Number</label>
         <p><strong>4743682</strong></p>
-        <small>Make payment via till number above and enter transaction ID below</small>
+        <small>Make payment via till number above and enter code sent to your phone via sms and press the submit button</small>
+
       </div>
-      <div class="form-group">
-        <label for="txn">Transaction ID</label>
-        <input type="text" id="txn" placeholder="MPESA123ABC" required>
-      </div>
-      <div class="form-group">
-        <label for="phone">Your Mobile Number</label>
-        <input type="text" id="phone" placeholder="07XXXXXXXX" required>
-      </div>
-      <button type="submit" class="btn">Submit Transaction</button>
-    </form>
+
+      <div class="container">
+        <h3>Enter Access Code</h3>
+        <input type="text" id="myInput" placeholder="Enter secret code">
+        <br>
+        <button id="submitBtn">Submit</button>
+    </div>
+      
+      </form>
   </div>
-
   <script>
-    function selectMethod(method) {
-      const cardForm = document.getElementById('card-payment');
-      const tillForm = document.getElementById('till-payment');
-      const methods = document.querySelectorAll('.payment-method');
+    document.getElementById("submitBtn").addEventListener("click", function() {
+        const inputValue = document.getElementById("myInput").value;
+        const correctCode = "1976"; // Change this code as needed
 
-      methods.forEach(m => m.classList.remove('active'));
-
-      if (method === 'card') {
-        cardForm.classList.remove('hidden');
-        tillForm.classList.add('hidden');
-        methods[0].classList.add('active');
-      } else {
-        cardForm.classList.add('hidden');
-        tillForm.classList.remove('hidden');
-        methods[1].classList.add('active');
-      }
-    }
-
-
-  </script>
+        if (inputValue === correctCode) {
+            window.location.href = "today.html"; // Target page
+        } else {
+            alert("Incorrect code. Try again.");
+        }
+    });
+</script>
 
 
   </body>

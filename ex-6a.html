@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code Access Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #6a11cb, #2575fc);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            background-color: white;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+
+        input[type="text"] {
+            padding: 10px;
+            width: 250px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            margin-bottom: 20px;
+            font-size: 16px;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #2575fc;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #1a5ed8;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Enter Access Code</h2>
+        <input type="text" id="myInput" placeholder="Enter secret code">
+        <br>
+        <button id="submitBtn">Submit</button>
+    </div>
+
+    <script>
+        document.getElementById("submitBtn").addEventListener("click", function() {
+            const inputValue = document.getElementById("myInput").value;
+            const correctCode = "1976"; // Change this code as needed
+
+            if (inputValue === correctCode) {
+                window.location.href = "today.html"; // Target page
+            } else {
+                alert("Incorrect code. Try again.");
+            }
+        });
+    </script>
+</body>
+</html>
