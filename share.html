@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Share and Earn</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f4f4;
+      padding: 40px;
+      display: flex;
+      justify-content: center;
+    }
+
+    .card {
+      background: white;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      width: 100%;
+      max-width: 400px;
+    }
+
+    h2 {
+      margin-bottom: 20px;
+    }
+
+    input {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 15px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      font-size: 16px;
+    }
+
+    button {
+      background-color: #28a745;
+      color: white;
+      padding: 14px;
+      border: none;
+      width: 100%;
+      border-radius: 6px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #218838;
+    }
+  </style>
+</head>
+<body>
+
+<div class="card">
+  <h2>Share and Earn Ksh 500</h2>
+  <form id="rewardForm">
+    <input type="tel" id="phone" placeholder="M-Pesa Phone Number" pattern="07[0-9]{8}" required />
+    <button type="submit">Share & Earn</button>
+  </form>
+</div>
+
+<script>
+  const form = document.getElementById('rewardForm');
+
+  form.addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    const email = document.getElementById('email').value;
+    const phone = document.getElementById('phone').value;
+
+    if (!phone.match(/^07\d{8}$/)) {
+      alert("Please enter a valid Safaricom number starting with 07");
+      return;
+    }
+
+    const shareData = {
+      title: 'Earn Ksh 500!',
+      text: Join and earn Ksh 500 via M-Pesa!,
+      url: 'https://yourdomain.com/referral?user=12345'
+    };
+
+    if (navigator.share) {
+      navigator.share(shareData).then(() => {
+        alert('Thanks for sharing! Your reward will be sent to ' + phone);
+        // Here, you would send phone & email to your backend:
+        fetch('http://localhost:3000/submit', {
+  method: 'POST',
+  headers: {
+    'Content-Type': 'application/json'
+  },
+  body: JSON.stringify({ email, phone })
+})
+.then(res => res.json())
+.then(data => alert(data.message))
+.catch(err => alert("Something went wrong"));
+      }).catch(console.error);
+    } else {
+      alert('Sharing not supported on this device.');
+    }
+  });
+  
+</script>
+
+</body>
+</html>
