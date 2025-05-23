@@ -2,105 +2,129 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Share and Earn</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Share to Earn</title>
   <style>
     body {
       font-family: Arial, sans-serif;
-      background: #f4f4f4;
+      text-align: center;
+      background: #f2f2f2;
       padding: 40px;
-      display: flex;
-      justify-content: center;
     }
-
     .card {
-      background: white;
+      background: #fff;
       padding: 30px;
-      border-radius: 10px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-      width: 100%;
       max-width: 400px;
+      margin: auto;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
     }
-
-    h2 {
-      margin-bottom: 20px;
-    }
-
-    input {
-      width: 100%;
-      padding: 12px;
-      margin-bottom: 15px;
-      border-radius: 6px;
-      border: 1px solid #ccc;
-      font-size: 16px;
-    }
-
     button {
-      background-color: #28a745;
+      background-color: #1b9e1b;
       color: white;
-      padding: 14px;
       border: none;
-      width: 100%;
-      border-radius: 6px;
+      padding: 15px 30px;
+      border-radius: 8px;
       font-size: 16px;
       cursor: pointer;
     }
-
     button:hover {
-      background-color: #218838;
+      background-color: #147a14;
     }
+    .gauge-container {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  margin: 20px auto;
+}
+.gauge {
+  transform: rotate(0deg);
+}
+.gauge-text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100px;
+  height: 100px;
+  line-height: 100px;
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+  color: #1b9e1b;
+}
+
+.my-button{
+  text-align: left;
+
+}
   </style>
 </head>
 <body>
+  <p class="my-button"><button><a href="page.html">GO BACK</a></button></p>
 
-<div class="card">
-  <h2>Share and Earn Ksh 500</h2>
-  <form id="rewardForm">
-    <input type="tel" id="phone" placeholder="M-Pesa Phone Number" pattern="07[0-9]{8}" required />
-    <button type="submit">Share & Earn</button>
-  </form>
-</div>
+
+  <div class="card">
+    <h2>Share and Earn Ksh 500</h2>
+    <p>Click below to share your referral link and get Ksh 500 via M-Pesa!</p>
+  
+    <!-- Gauge -->
+    <div class="gauge-container">
+      <svg class="gauge" width="100" height="100">
+        <circle cx="50" cy="50" r="45" stroke="#eee" stroke-width="10" fill="none"/>
+        <circle id="progress" cx="50" cy="50" r="45" stroke="#1b9e1b" stroke-width="10" fill="none"
+                stroke-dasharray="283" stroke-dashoffset="283" transform="rotate(-90 50 50)"/>
+      </svg>
+      <div class="gauge-text" id="shareCount">0</div>
+    </div>
+  
+    <button onclick="shareLink()">Share Now</button>
+  </div>
+
+  <div id="paymentSection" style="display: none; margin-top: 20px;">
+    <p><strong>You're almost done!</strong></p>
+    <p>Send <strong>Ksh 30</strong> to <strong>TILL 123456</strong> to receive your Ksh 500 reward.</p>
+    <p>After payment, enter your M-Pesa number below:</p>
+    <input type="text" id="mpesaNumber" placeholder="Enter M-Pesa Number" style="padding: 10px; width: 100%; max-width: 300px; border: 1px solid #ccc; border-radius: 5px;" />
+    <button onclick="submitPayment()">Submit</button>
+  </div>
 
 <script>
-  const form = document.getElementById('rewardForm');
 
-  form.addEventListener('submit', function(e) {
-    e.preventDefault();
+let shareCounter = 0;
+const maxShares = 50; // You can change this limit
 
-    const email = document.getElementById('email').value;
-    const phone = document.getElementById('phone').value;
+function shareLink() {
+  const shareData = {
+    title: 'Earn Ksh 500!',
+    text: 'Join now and earn Ksh 500 via M-Pesa!',
+    url: 'https://brightpredict.github.io/brightpredict/'
+  };
 
-    if (!phone.match(/^07\d{8}$/)) {
-      alert("Please enter a valid Safaricom number starting with 07");
-      return;
-    }
+  if (navigator.share) {
+    navigator.share(shareData).then(() => {
+      shareCounter++;
+      updateGauge();
+      alert('Thanks for sharing! Your reward is being processed.');
+      alert('Share with 25 people and earn your reward.');
+      // Trigger backend API here
+    }).catch(console.error);
+  } else {
+    navigator.clipboard.writeText(shareData.url).then(() => {
+      shareCounter++;
+      updateGauge();
+      alert('Referral link copied to clipboard: ' + shareData.url);
+    });
+  }
+}
 
-    const shareData = {
-      title: 'Earn Ksh 500!',
-      text: Join and earn Ksh 500 via M-Pesa!,
-      url: 'https://yourdomain.com/referral?user=12345'
-    };
-
-    if (navigator.share) {
-      navigator.share(shareData).then(() => {
-        alert('Thanks for sharing! Your reward will be sent to ' + phone);
-        // Here, you would send phone & email to your backend:
-        fetch('http://localhost:3000/submit', {
-  method: 'POST',
-  headers: {
-    'Content-Type': 'application/json'
-  },
-  body: JSON.stringify({ email, phone })
-})
-.then(res => res.json())
-.then(data => alert(data.message))
-.catch(err => alert("Something went wrong"));
-      }).catch(console.error);
-    } else {
-      alert('Sharing not supported on this device.');
-    }
-  });
-  
+function updateGauge() {
+  const progress = document.getElementById('progress');
+  const shareText = document.getElementById('shareCount');
+  const percentage = Math.min(shareCounter / maxShares, 1);
+  const offset = 283 * (1 - percentage);
+  progress.style.strokeDashoffset = offset;
+  shareText.textContent = shareCounter;
+}
 </script>
 
 </body>
