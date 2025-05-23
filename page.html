@@ -5,6 +5,8 @@
     <meta charset="utf-8">
     <title>Home page</title>
   </head>
+
+
   <div class="my-tab">
   <p><button><a href="home.html">GO BACK</a></button></p>
   <p><button><a href="history.html">Our previous predictions</a></button></p>
@@ -16,13 +18,22 @@
 
 
   <style>
+    .my-tab{
+      max-width: 800px;
+      margin: 2rem auto;
+      padding: 2rem;
+      background: rgb(255, 255, 255);
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+      border-radius: 12px;
+    }
 
     *{
       font-size: 1.2em;
     }
     body {
       font-family: Arial, sans-serif;
-      background: #af89d1;
+      background: #00796b;
+      
       margin: 0;
       padding: 20px;
     }
@@ -30,7 +41,7 @@
      
 
     h3 {
-     background: magenta;
+     background: rgba(255, 0, 255, 0.747);
      color: #333;
    }
 
@@ -38,8 +49,8 @@
       width: 100%;
       border-collapse: collapse;
       margin-bottom: 40px;
-      background: #fff;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      background: #24831b28;
+      box-shadow: 0 0 10px rgba(194, 52, 52, 0.1);
     }
 
     th, td {
@@ -49,8 +60,8 @@
     }
 
     th {
-      background-color: #007BFF;
-      color: white;
+      background-color: #3538e04d;
+      color: rgba(34, 58, 6, 0.349);
     }
 
     tr:hover {
@@ -90,45 +101,7 @@
       box-sizing: border-box;
     }
 
-    .payment-methods {
-      display: flex;
-      justify-content: space-between;
-      margin-bottom: 20px;
-    }
-
-    .payment-method {
-      flex: 1;
-      text-align: center;
-      padding: 10px;
-      border: 2px solid #ccc;
-      cursor: pointer;
-      margin: 0 5px;
-    }
-
-    .payment-method.active {
-      border-color: #007BFF;
-      background: #e6f0ff;
-    }
-
-    .btn {
-      display: block;
-      width: 100%;
-      padding: 12px;
-      background: #007BFF;
-      color: white;
-      border: none;
-      font-size: 16px;
-      cursor: pointer;
-    }
-
-    .btn:hover {
-      background: #0056b3;
-    }
-
-    .hidden {
-      display: none;
-    }
-
+  
     .affiliate-link {
       display: block;
       background: #e6f9e6;
@@ -202,18 +175,20 @@
   color: #aaa;
 }
 button {
-            padding: 10px 20px;
-            background-color: #2575fc;
-            color: white;
-            border: none;
-            border-radius: 6px;
-            font-size: 16px;
-            cursor: pointer;
-        }
+      display: inline-block;
+      margin-top: 1.5rem;
+      background: #00796b;
+      color: white;
+      padding: 0.6rem 1.2rem;
+      border-radius: 6px;
+      text-decoration: none;
+      border: none;
+      cursor: pointer;
+    }
 
-        button:hover {
-            background-color: #1a5ed8;
-        }
+    a.button:hover, button.button:hover {
+      background: #004d40;
+    }
 
         .hidden-raw {
           display: none;
@@ -223,7 +198,7 @@ button {
           background-color: #af89d1;
         }
         h5{
-    background: red;
+    background: rgb(0, 255, 55);
     animation: blink-animation 4s
     steps(1, start) infinite;
     viaibility: hidden;
@@ -235,9 +210,7 @@ button {
     20%{ visibility: hidden;}
     100% {visibility: visible;}
 
-  body {
-    background: #af89d1;
-  }
+  
   </style>
   
 </head>
