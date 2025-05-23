@@ -1,69 +1,72 @@
 <!DOCTYPE html>
-<html lang="en" >
-<title>wELCOME PAGE</title>
-
+<html lang="en">
   <head>
     <meta charset="utf-8">
-    <style>
+    <title> login/signup</title>
+  </head>
+  <style media="screen">
 
+  *{
+    font-size: 1.2em;
+  }
 
-body {
-  background: #af89d1;
-}
+  h4 {
 
-h1 {
-  background: magenta;
-  font-size: 3rem;
-}
-.container{
-  width: 60%;
-  max-width: 300px;
-  padding: 20px;
-  background: #ffe6ff;
-  border-radius: 19px;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
-
-}
-.form-box, h2{
-max-width: 400px;
-padding: 40px;
-}
- input {
-   width: 60%;
-   padding: 15px;
-   margin: 11px;
-   border: 1px solid #ddd;
-   border-radius: 12px;
+       background: magenta;
+       animation: blink-animation 4s
+       steps(1, start) infinite;
+       viaibility: hidden;
  }
 
+
+     @keyframes blink-animation {
+       0% {visibility: visible;}
+       20%{ visibility: hidden;}
+       100% {visibility: visible;}
+
+     }
+  body {
+    background: #af89d1;
+
+  }
+  footer {
+    background-color: #ccccff;
+
+  }
 button {
-  width: 40%;
-  background: blue
-  margin: 12px;
-  padding: 13px;
-  border-radius: 12px;
+    padding: 20px;
+    background-color: #66ff33;
+    border-radius: 6px;
+    text-color: black;
 }
+button:hover {
+  color: #003300;
+  font-size: 34px;
+}
+aside {
 
-    </style>
-  </head>
+  bottom: 0;
+  right:  0;
+  background-color: #628947;
+  padding: 50px;
+  border: 1px solid #ccc;
+
+}
+  </style>
+  <img src="https://cdn.tuko.co.ke/images/1120/174e2bf81b1337b1.jpeg?v=1" width="400 px" hieght="600px alt="Bright hub">
   <body>
-    <section>
-      <h1><a href="home.html">CONTINUE WITHOUT SIGNING IN</a></h1>
+    <p><button><a href="page.html">Next</a></button></p>
+    <p> We are currently experiencing a technical issue with te login and sign up page on our website</P>
+      <p> our technical team is working to resolve the problem</P>
+        <p> we apologize for inconvinience<p>
+          <p> <h4>To continue to our services please clink the next button</h4>
 
-</section>
-    <div class="container">
-      <div class="form-box">
-    <form>
-  <h2>login</h2>
-<p><input type="phone number" placeholder="phone number" required></p>
-<p><input type="password" placeholder="password" required></p>
-<p><button onclick="you have succesful login in to your account"><a href="home.html">login</a></button></p>
-if you don't have an account,<button><a href="home.html">signup ?</a></button>
-</form>
-</div>
-</div>
-<script>
-  alert (" welcome to bright predictions company")
-</script>
   </body>
+  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQNEL9eGjvKLFINXq_72A-BHDLvkhQ-SUc8hQ&s" width="400 px" hieght="600pxalt="Bright hub">
+  <footer><p>Thanks for choosing Bright hub
+    your altimate destination for football prediction</p>
+  contact us at email <u>brighttips4@gmail.com</u>
+   or Whatsup <u>0742489526</u>
+  </footer>
+
 </html>
