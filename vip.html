@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Bright Predict VIP</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f2f7ff;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      max-width: 900px;
+      margin: auto;
+      padding: 20px;
+    }
+    .welcome {
+      text-align: center;
+      padding: 30px 0;
+    }
+    .welcome h1 {
+      color: #003366;
+    }
+    .plan {
+      background-color: #ffffff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      margin: 20px 0;
+    }
+    .plan h2 {
+      color: #0066cc;
+    }
+    .subscribe-button {
+      padding: 10px 20px;
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+    .subscribe-button:hover {
+      background-color: #0056b3;
+    }
+    .confirmation {
+      margin-top: 15px;
+      color: green;
+      font-weight: bold;
+      display: none;
+    }
+    .images {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      margin-top: 30px;
+    }
+    .images img {
+      width: 200px;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="welcome">
+      <h1>Welcome to Bright Predict VIP</h1>
+      <p>Unlock premium access to our most accurate predictions and insider insights!</p>
+    </div>
+
+    <div class="plan">
+      <h2>VIP Subscription Plan</h2>
+      <p><strong>Price:</strong>KSH 950./</p>
+      <p><strong>Benefits:</strong></p>
+      <ul>
+        <li>Access to daily premium predictions</li>
+        <li>Early insights and betting tips</li>
+        <li>Private VIP-only chat group</li>
+      </ul>
+      <ul>
+     <h4>How to subscribe</h4>
+     <li>Make pyment of Ksh 950 </li>
+    <li>you will receive a secret code</li>
+    <li>Enter the code  after pressing the view button</li>
+  </ul>
+      <button  class="subscribe-button" onclick="subscribe()" >Subscribe Now</button>
+      <p id="confirmation" class="confirmation">Thank you for subscribing to Bright Predict VIP!</p>
+
+
+    </div>
+    <p><button class="subscribe-button"><a href="ex-6a.html">CLICK HERE TO VIEW VIP GAMES TODAY</a></button></p>
+
+    <div class="images">
+      <img src="prediction1.jpg" alt="Past Prediction 1">
+      <img src="vip1.jpg" alt="Past Prediction 2">
+      <img src="vip2.jpg" alt="Past Prediction 3">
+      <img src="prediction4.jpg" alt="Past Prediction 4">
+    </div>
+  </div>
+
+  <script>
+    function subscribe() {
+      document.getElementById("confirmation").style.display = "block";
+    }
+  </script>
+
+</body>
+</html>
