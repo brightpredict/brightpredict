@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Betting Slip</title>
+    <style>body {
+      font-family: Arial, sans-serif;
+      background-color: #101820;
+      color: #fff;
+      margin: 0;
+      padding: 0;
+  }
+  
+  .container {
+      padding: 20px;
+  }
+  
+  header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #1c1f26;
+      padding: 10px 20px;
+  }
+  
+  header h1 {
+      color: #ffd700;
+  }
+  
+  .deposit {
+      background-color: #ffd700;
+      border: none;
+      padding: 10px 20px;
+      font-weight: bold;
+      cursor: pointer;
+      border-radius: 5px;
+  }
+  
+  .summary {
+      display: flex;
+      justify-content: space-around;
+      background-color: #1f2633;
+      margin: 15px 0;
+      padding: 10px;
+      border-radius: 10px;
+  }
+  
+  .summary div {
+      text-align: center;
+  }
+  
+  .events {
+      background-color: #1c1f26;
+      padding: 15px;
+      border-radius: 10px;
+  }
+  
+  .event {
+      background-color: #2a2f3a;
+      margin: 10px 0;
+      padding: 15px;
+      border-radius: 10px;
+  }
+  
+  .pick {
+      color: #00ffcc;
+      font-weight: bold;
+  }
+  
+  .pagination {
+      text-align: center;
+      margin-top: 20px;
+  }</style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Bet365</h1>
+            <button class="deposit">Deposit</button>
+        </header>
+
+        <section class="summary">
+            <div>Amount<br><strong>KES1000</strong></div>
+            <div>Possible Payout<br><strong>KES22,462.72</strong></div>
+            <div>W/L/T<br><strong>0/0/3</strong></div>
+        </section>
+
+        <section class="events">
+            <h2>Events (Odds 32.02)</h2>
+
+            <div class="event">
+                <h3>Sheffield United Vs Sunderland</h3>
+                <p>Type: 1X2 & TOTAL</p>
+                <p>Starts at 24/05, 17:01</p>
+                <p>Pick: <span class="pick"> Sheffield United & over 1.5(3.20)</span></p>
+            </div>
+
+            <div class="event">
+                <h3>Goztepe Izmir Vs Galatasaray Istanbul</h3>
+                <p>Type: 1X2 & TOTAL</p>
+                <p>Starts at 24/05, 19:00</p>
+                <p>Pick: <span class="pick">Galatasaray Istanbul & under 3.5 (3.20)</span></p>
+            </div>
+
+            <div class="event">
+                <h3>Shamakhi Fk Vs Qarabag Fk</h3>
+                <p>Type: 1X2 & BOTH TEAMS TO SCORE</p>
+                <p>Starts at 24/05, 16:00</p>
+                <p>Pick: <span class="pick">Qarabag FK & yes (2.86)</span></p>
+            </div>
+
+            <div class="pagination">
+                <span>&lt; 15 Bets &gt;</span>
+            </div>
+        </section>
+    </div>
+</body>
+</html>
